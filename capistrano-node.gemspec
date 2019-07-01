@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.version       = '0.0.1'
   spec.authors       = ['Tom Scott-Malden', 'Neil Aitken']
   spec.email         = ['tom@skywire.co.uk', 'neil@skywire.co.uk']
-  spec.description   = %q{staging branch support for Skywire Capistrano}
-  spec.summary       = %q{staging branch support for Skywire Capistrano}
-  spec.homepage      = 'https://github.com/Skywire/capistrano-staging-branch'
+  spec.description   = %q{Node support for Skywire Capistrano}
+  spec.summary       = %q{Node support for Skywire Capistrano}
+  spec.homepage      = 'https://github.com/Skywire/capistrano-node'
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
