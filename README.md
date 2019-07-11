@@ -31,3 +31,10 @@ In your `deploy.rb` add the following configuration
 set :gulp_paths, ["app/design/frontend/skywire/default/"]
 set :npm_commands, [{path: "app/design/frontend/skywire/default/", command: "install"},{path: "skywire-patternlab", command: "install"},{path: "skywire-patternlab", command: "run pl:build"}]
 ~~~
+
+If installing into a non magento build then add the following into the `config.rb`:
+
+~~~
+after "deploy:updated", "node:npm:run"
+after "deploy:updated", "node:gulp:run"
+~~~
