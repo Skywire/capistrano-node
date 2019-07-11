@@ -1,7 +1,5 @@
-after "magento:deploy:mode:production", "node:npm:run", unless fetch(:is_magento, false)
-after "magento:deploy:mode:production", "node:gulp:run", unless fetch(:is_magento, false)
-after "deploy:updated", "node:npm:run", unless !fetch(:is_magento, false)
-after "deploy:updated", "node:gulp:run", unless !fetch(:is_magento, false)
+after "magento:deploy:mode:production", "node:npm:run"
+after "magento:deploy:mode:production", "node:gulp:run"
 
 namespace :node do
   namespace :gulp do
