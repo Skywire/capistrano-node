@@ -1,6 +1,3 @@
-before "magento:setup:static-content:deploy", "node:npm:run"
-after "node:npm:run", "node:gulp:run"
-
 namespace :node do
   namespace :gulp do
     desc "Run configured gulpfiles"
@@ -36,3 +33,6 @@ namespace :node do
     end
   end
 end
+
+before "magento:setup:static-content:deploy", "node:npm:run"
+after "node:npm:run", "node:gulp:run"
