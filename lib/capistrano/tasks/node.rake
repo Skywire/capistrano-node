@@ -1,5 +1,5 @@
-after "magento:deploy:mode:production", "node:npm:run"
-after "magento:deploy:mode:production", "node:gulp:run"
+before "magento:setup:static-content:deploy", "node:npm:run"
+after "node:npm:run", "node:gulp:run"
 
 namespace :node do
   namespace :gulp do
